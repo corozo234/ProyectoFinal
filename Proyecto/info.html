@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vuelos Programados - Línea Aérea Ecuador UBE</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(to right, #e0f7fa, #ffffff);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .navbar {
+      background-color: #006064;
+    }
+    .navbar-brand, .nav-link, .table th {
+      color: #ffffff !important;
+    }
+    .dropdown-menu {
+      background-color: #004d40;
+    }
+    .dropdown-item {
+      color: #ffffff;
+    }
+    .dropdown-item:hover {
+      background-color: #00695c;
+    }
+    .header {
+      background-color: #004d40;
+      color: white;
+      padding: 2rem;
+      border-radius: 8px;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    .table th {
+      background-color: #00796b;
+    }
+    .table td {
+      background-color: #e0f2f1;
+    }
+    footer {
+      background-color: #004d40;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 50px;
+    }
+    .flight-icon {
+      width: 50px;
+      animation: fly 2s infinite ease-in-out;
+    }
+    @keyframes fly {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+      100% { transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="https://cdn-icons-png.flaticon.com/512/681/681494.png" alt="Logo" width="40" class="me-2">
+        Asesoria de aerolinea aerea
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fas fa-plane-departure"></i> Vuelos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fas fa-plane-departure"></i> Millas acumuladas</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="menu" role="button" data-bs-toggle="dropdown">
+              <i class="fas fa-user"></i> Usuario
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Iniciar sesión</a></li>
+              <li><a class="dropdown-item" href="#">Registrarse</a></li>
+              <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container mt-4">
+    <div class="header">
+      <h1>Listado de Vuelos Programados</h1>
+      <p>Consulta tus próximos destinos con nosotros</p>
+      <img src="https://media.giphy.com/media/VbnUQpnihPSIgIXuZv/giphy.gif" alt="Avión animado" class="flight-icon">
+    </div>
+
+    <table class="table table-bordered table-hover">
+      <thead>
+        <tr>
+          <th><i class="fas fa-plane"></i> N.º Vuelo</th>
+          <th><i class="fas fa-map-marker-alt"></i> Origen</th>
+          <th><i class="fas fa-map-marker-alt"></i> Destino</th>
+          <th><i class="fas fa-calendar-day"></i> Fecha Salida</th>
+          <th><i class="fas fa-clock"></i> Hora Salida</th>
+          <th><i class="fas fa-calendar-check"></i> Fecha Llegada</th>
+          <th><i class="fas fa-clock"></i> Hora Llegada</th>
+          <th><i class="fas fa-plane"></i> Aerolínea</th>
+          <th><i class="fas fa-info-circle"></i> Estado</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>EQ123</td>
+          <td>Quito</td>
+          <td>Guayaquil</td>
+          <td>2025-06-03</td>
+          <td>08:00</td>
+          <td>2025-06-03</td>
+          <td>09:00</td>
+          <td>Aeroregional</td>
+          <td>Programado</td>
+        </tr>
+        <tr>
+          <td>EQ124</td>
+          <td>Guayaquil</td>
+          <td>Loja</td>
+          <td>2025-06-03</td>
+          <td>10:30</td>
+          <td>2025-06-03</td>
+          <td>11:30</td>
+          <td>Aeroregional</td>
+          <td>Programado</td>
+        </tr>
+        <tr>
+          <td>EQ125</td>
+          <td>Quito</td>
+          <td>Esmeraldas</td>
+          <td>2025-06-04</td>
+          <td>14:00</td>
+          <td>2025-06-04</td>
+          <td>15:00</td>
+          <td>Aeroregional</td>
+          <td>Programado</td>
+        </tr>
+        <tr>
+          <td>EQ126</td>
+          <td>Coca</td>
+          <td>Quito</td>
+          <td>2025-06-04</td>
+          <td>16:30</td>
+          <td>2025-06-04</td>
+          <td>17:30</td>
+          <td>Aeroregional</td>
+          <td>Programado</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <footer>
+    &copy; 2025 Asesoria de aerolinea aerea.
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
